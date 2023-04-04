@@ -25,7 +25,7 @@ class App extends React.Component {
   RemoveChar = (char,index) => {
     let string = '';
     for(let i = 0; i < this.state.value.length; i++){
-      if(this.state.value[i] === char && i !== index)
+      if((this.state.value[i] === char.toUpperCase() || this.state.value[i] === char.toLowerCase()) && i !== index)
         string += '';
       else
         string += this.state.value[i];
